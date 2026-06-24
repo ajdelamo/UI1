@@ -5,160 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portal de Estudio · Antonio</title>
 <style>
-  :root {
-    --bg: #0f0f13;
-    --surface: #1a1a22;
-    --surface2: #22222e;
-    --border: #2e2e3e;
-    --accent: #7c6af7;
-    --accent2: #4fc3a1;
-    --text: #e8e8f0;
-    --text2: #9090a8;
-    --font: 'Georgia', serif;
-    --mono: 'Courier New', monospace;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    min-height: 100vh;
-    padding: 0;
-  }
-  header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 36px 24px 28px;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 1.6rem;
-    font-weight: normal;
-    letter-spacing: 0.04em;
-    color: #c0c0e0;
-  }
-  header h1 span { color: var(--accent); font-weight: bold; }
-  header p { margin-top: 8px; color: var(--text2); font-size: 0.85rem; }
-
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 32px 20px 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
-  }
-
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px 22px 18px;
-    text-decoration: none;
-    color: var(--text);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    transition: border-color 0.15s, transform 0.15s;
-  }
-  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .card .badge {
-    font-family: var(--mono);
-    font-size: 0.68rem;
-    color: var(--accent2);
-    letter-spacing: 0.05em;
-  }
-  .card h2 { font-size: 1.1rem; font-weight: normal; }
-  .card p { font-size: 0.82rem; color: var(--text2); line-height: 1.5; }
-  .card .go {
-    margin-top: 8px;
-    font-size: 0.8rem;
-    color: var(--accent);
-    font-family: var(--mono);
-  }
-
-  .card.placeholder {
-    border-style: dashed;
-    color: var(--text2);
-    cursor: default;
-  }
-  .card.placeholder:hover { border-color: var(--border); transform: none; }
-  .card.placeholder .badge { color: var(--text2); }
-
-  footer {
-    text-align: center;
-    color: var(--text2);
-    font-size: 0.75rem;
-    padding: 20px;
-    border-top: 1px solid var(--border);
-  }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f4;color:#1a1a18;min-height:100vh}
+header{background:#fff;border-bottom:1px solid #d3d1c7;padding:28px 24px 22px;text-align:center}
+header h1{font-size:18px;font-weight:600;color:#1a1a18;letter-spacing:.01em}
+header p{margin-top:5px;color:#888780;font-size:12px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 60px}
+.section-label{font-size:11px;font-weight:600;color:#888780;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #d3d1c7}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-bottom:24px}
+.card{background:#fff;border:1.5px solid #d3d1c7;border-radius:12px;padding:18px 18px 14px;text-decoration:none;color:#1a1a18;display:flex;flex-direction:column;gap:6px;transition:border-color .15s,box-shadow .15s}
+.card:hover{border-color:#185fa5;box-shadow:0 2px 8px rgba(24,95,165,.10)}
+.badge{font-size:10px;font-weight:600;color:#185fa5;background:#e6f1fb;padding:2px 8px;border-radius:5px;letter-spacing:.04em;align-self:flex-start}
+.badge.gace{color:#0f6e56;background:#eaf3de}
+.card h2{font-size:14px;font-weight:600;color:#1a1a18;line-height:1.4}
+.card p{font-size:12px;color:#888780;line-height:1.55}
+.go{margin-top:6px;font-size:12px;color:#185fa5;font-weight:600}
+footer{text-align:center;color:#b4b2a9;font-size:11px;padding:20px;border-top:1px solid #d3d1c7}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>📚 Portal de <span>Estudio</span></h1>
-  <p>Tests adaptativos · Grado en Derecho </p>
+  <h1>📚 Portal de Estudio · Antonio</h1>
+  <p>Tests adaptativos con seguimiento de progreso · Grado en Derecho &amp; GACE 2027</p>
 </header>
+<div class="wrap">
 
-<main>
+  <div class="section-label">Grado en Derecho — UI1</div>
+  <div class="grid">
+    <a class="card" href="fdd.html">
+      <span class="badge">TEORÍA Y FILOSOFÍA DEL DERECHO</span>
+      <h2>FDD · Test Adaptativo</h2>
+      <p>81 preguntas, 6 unidades. Filtros por error y modo adaptativo top-20.</p>
+      <span class="go">Abrir test →</span>
+    </a>
+    <a class="card" href="due.html">
+      <span class="badge">DERECHO DE LA UNIÓN EUROPEA</span>
+      <h2>DUE · Test Adaptativo</h2>
+      <p>101 preguntas, 6 unidades. Filtros por error y modo adaptativo top-20.</p>
+      <span class="go">Abrir test →</span>
+    </a>
+  </div>
 
-  <!-- ── Tests activos ──────────────────────────────────────────── -->
+  <div class="section-label">GACE 2027 — Oposición Gestión Administrativa</div>
+  <div class="grid">
+    <a class="card" href="LPAC.html">
+      <span class="badge gace">BLOQUE IV · LEY 39/2015</span>
+      <h2>LPACAP · Test Adaptativo</h2>
+      <p>103 preguntas, 11 bloques. Filtros por error y modo adaptativo top-20.</p>
+      <span class="go">Abrir test →</span>
+    </a>
+    <a class="card" href="GACE_BVI_01.html">
+      <span class="badge gace">BLOQUE VI · SEMANA 01</span>
+      <h2>Gestión Financiera · Test Adaptativo</h2>
+      <p>72 preguntas · T51, T52, T55, T53, T56 · LGP y presupuesto.</p>
+      <span class="go">Abrir test →</span>
+    </a>
+    <a class="card" href="GACE_Repaso_General_2027.html">
+      <span class="badge gace">REPASO ACUMULADO</span>
+      <h2>Repaso General GACE 2027</h2>
+      <p>Crece cada semana. Repaso de todo lo estudiado desde junio 2026.</p>
+      <span class="go">Abrir test →</span>
+    </a>
+  </div>
 
-  <a class="card" href="fdd.html">
-    <span class="badge">GRADO · TEORÍA Y FILOSOFÍA DEL DERECHO</span>
-    <h2>FDD · Test Adaptativo</h2>
-    <p>81 preguntas, 6 unidades. Filtros por error y modo adaptativo top-20.</p>
-    <span class="go">Abrir test →</span>
-  </a>
-
-  <!--
-  ── PLANTILLA: copia este bloque para añadir una nueva asignatura ──
-
-  <a class="card" href="NOMBRE_ARCHIVO.html">
-    <span class="badge">CATEGORÍA · NOMBRE ASIGNATURA</span>
-    <h2>SIGLAS · Test Adaptativo</h2>
-    <p>Breve descripción: nº preguntas, unidades, etc.</p>
-    <span class="go">Abrir test →</span>
-  </a>
-
-  -->
-
-  <!-- ── Próximamente (placeholders, opcional) ─────────────────── -->
-  
-<a class="card" href="due.html">
-    <span class="badge">GRADO · DERECHO DE LA UNIÓN EUROPEA</span>
-    <h2>DUE · Test Adaptativo</h2>
-    <p>101 preguntas, 6 unidades. Filtros por error y modo adaptativo top-20.</p>
-    <span class="go">Abrir test →</span>
-  </a>
-
-  <a class="card" href="LPAC.html">
-    <span class="badge">GACE</span>
-    <h2>Ley 39/2015 LPACAP · Test Adaptativo</h2>
-    <p>103 preguntas, 11 bloques Filtros por error y modo adaptativo top-20.</p>
-    <span class="go">Abrir test →</span>
-  </a>
-
-<a class="card" href="GACE_BVI_01.html">
-    <span class="badge">GACE</span>
-    <h2>Bloque VI · Semana 01 · Test Adaptativo</h2>
-    <p>72 preguntas, 5 bloques Filtros por error y modo adaptativo top-20.</p>
-    <span class="go">Abrir test →</span>
-  </a>
-
-<a class="card" href="GACE_Repaso_General_2027.html">
-    <span class="badge">GACE</span>
-    <h2>Repaso General · Test Adaptativo</h2>
-    <p>Repaso General GACE 2027.</p>
-    <span class="go">Abrir test →</span>
-  </a>
-  
-</main>
-
-<footer>
-  Generado y mantenido por Antonio · ajdelamo/UI1
-</footer>
-
+</div>
+<footer>Generado y mantenido por Antonio · ajdelamo/UI1</footer>
 </body>
 </html>
